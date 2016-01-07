@@ -4,6 +4,29 @@ These labs include simplified versions of the client code, designed to help the 
 
 **Be sure you are in the IoT-Field-Labs branch when viewing and downloading code.**
 
+#New IoT Hub-based labs
+The latest version of these labs use IoT Hub and support bi-directional communication. These labs are also updated with the latest Azure Portal.
+
+**NOTE: Before connecting anything to the Pi or Fez HAT, either add 11mm or 12mm standoffs between them, or add some electrical tape to cover the top of the HDMI connector. Pressing down on the HAT so that the through-hole solder joints make contact with the HDMI connector will send voltage to ground, toasting the HAT and possibly the Pi.**
+
+##WindowsIoTCorePi2FezHat-IoTHubs
+This is the version using Windows 10 IoT Core on a Raspberry Pi 2. It requires a Windows 10 PC for development. Products and services demonstrated include Windows UWP development, IoT Hubs, Bi-Directional Communication, Azure Web Apps, Power BI, and more.
+
+[View lab here](WindowsIoTCorePi2FezHat-IoTHubs)
+
+##RaspbianFezHat-IoTHubs
+This is the version using Raspbian and Mono/C# for development using a PC and a Raspberry Pi 2. It does not require Windows 10, but currently does rely on Visual Studio for development. Products and services demonstrated include Raspberry Pi Raspbian Linux, IoT Hubs, Bi-Directional Communication, Azure Web Apps, Power BI, and more.
+
+[View lab here](RaspbianFezHat-IoTHubs)
+
+
+
+
+#Older Event Hub-based labs
+These are here in case you want to use Event Hubs rather than the new IoT Hub. If you aren't sure which to pick, use the above IoT Hub version.
+
+**NOTE: Before connecting anything to the Pi or Fez HAT, either add 11mm or 12mm standoffs between them, or add some electrical tape to the top of the HDMI connector. Pressing down on the HAT so that the through-hole solder joints make contact with the HDMI connector will send voltage to ground, toasting the HAT and possibly the Pi.**
+
 ##WindowsIoTCorePi2FezHat
 This is the version using Windows 10 IoT Core on a Raspberry Pi 2. It requires a Windows 10 PC for development. Products and services demonstrated include Windows UWP development, Event Hubs, Stream Analytics, Azure Web Apps, Power BI, and more.
 
