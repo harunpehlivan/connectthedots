@@ -61,6 +61,7 @@ For this project, you will need the following:
 - An Ethernet port on the PC, or an auto-crossover USB->Ethernet adapter like the [Belkin F4U047](http://www.amazon.com/Belkin-USB-Ethernet-Adapter-F4U047bt/dp/B00E9655LU/ref=sr_1_2).
 - Standard Ethernet cable
 - A good 16GB or 32GB Class 10 SD card. We recommend Samsung or Sandisk. Other cards will usually work, but tend to die more quickly.
+- A WiFi dongle from the [list of devices that are currently supported by Windows 10 IoT Core on the Raspberry Pi 2](http://ms-iot.github.io/content/en-US/win10/SupportedInterfaces.htm#WiFi-Dongles)
 
 To setup your devices perform the following steps:
 
@@ -70,7 +71,7 @@ To setup your devices perform the following steps:
 
 	_The FEZ hat connected to the Raspberry Pi 2 device_
 
-2. Get a Windows 10 IoT Core SD Card or download the **Windows 10 IoT Core** image as per the instructions on <https://ms-iot.github.io/content/en-US/win10/SetupRPI.htm>, be sure to follow the steps to mount the image, and run the installer on your development PC. If you already have the OS image on a card, you still need to follow this step to get the IoT Core Watcher and Visual Studio templates on to your PC.
+2. Get a Windows 10 IoT Core SD Card or download the **Windows 10 IoT Core** image as per the instructions on <http://ms-iot.github.io/content/en-US/win10/RPI.htm>, be sure to follow the steps to mount the image, and run the installer on your development PC. If you already have the OS image on a card, you still need to follow this step to get the IoT Core Watcher and Visual Studio templates on to your PC.
 
 3. Once you have the image on the card, insert the micro SD card in the Raspberry Pi device.
 
@@ -108,19 +109,47 @@ To setup your devices perform the following steps:
 
 	![Connected to the Raspberry using PS](Images/connected-to-the-raspberry-using-ps.png?raw=true)
 
-#### Renaming your Device
+#### Renaming your Device and Checking the Date and Time
 
 1. To change the _computer name_, use the **setcomputername** utility. In PowerShell, type the following command.
 
 	`setcomputername <new-name>`
 
-2. Reboot the device for the change to take effect. You can use the shutdown command as follows:
+1. The date and time on the Pi must be correct for the security tokens used to publish to Azure later in the lab to be valid.  To check the current time zone setting on the Pi, type:
+
+	`tzutil /g`
+
+1. If the time zone reported is not correct, you can find a list of valid time zones using (you may need to increase the buffer size on your powershell window):
+
+	`tzutil /l`
+
+1. To set the time zone, locate the id of the time zone you want from the step above, then use:
+
+	`tzutil /s "Your TimeZone Name"
+
+	For example, for "Pacific Standard Time"
+
+	`tzutil /s "Pacific Standard Time"
+
+1. To check the date on the Raspberry Pi, type
+
+	`Get-Date`
+
+1. If the date or time is incorrect, use the `Set-Date` utility
+
+	`Set-Date "mm/dd/yy hh:mm:ss AM/PM"`
+
+	For Example, if it was 12:15 pm on January 3rd, 2016:
+
+	`Set-Date "01/03/16 12:15 PM"`
+
+2. **Reboot the device for the change to take effect**. You can use the shutdown command as follows:
 
 	`shutdown /r /t 0`
 
 3. Finally, connect to the Raspberry Pi to the same network as your Windows 10 development PC.
 
-You can also rename the device by using the web server, but certain functions are available only through PowerShell. Now that you understand how to connect through PowerShell, we'll use the web server to set up WiFi.
+You can also rename the device and set the time zone by using the web server, but certain functions, like actually changing the date and time, are currently available only through PowerShell. Now that you understand how to connect through PowerShell, we'll use the web server to set up WiFi.
 
 #### Using WiFi on your Device
 
