@@ -83,6 +83,11 @@ To setup your devices perform the following steps:
 
 7. Run the **Windows 10 IoT Core Watcher** utility (installed in step 2) in your development PC and copy your Raspberry Pi IP address by right-clicking on the detected device and selecting **Copy IP Address**.
 
+	- Click the windows "**Start**" button
+	- Type "**WindowsIoTCoreWatcher**" to pull it up in the search results
+	- You may want to right click on the program name and select "**Pin to Start**" to pin it to your start screen for easy access
+	- Press **Enter** to run it
+
 	![windows-iot-core-watcher](Images/windows-iot-core-watcher.png?raw=true)
 
 8. Launch an administrator PowerShell console on your local PC. The easiest way to do this is to type _powershell_ in the **Search the web and Windows** textbox near the Windows Start Menu. Windows will find **PowerShell** on your machine. Right-click the **Windows PowerShell** entry and select **Run as administrator**. The PS console will show.
@@ -157,17 +162,12 @@ You can also rename the device and set the time zone by using the web server, bu
 
 1. To configure your device, run the **Windows 10 IoT Core Watcher** utility in your development PC and open the [web-based management](http://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm) application by right-clicking the detected device and selecting **Web Browser Here**.  To launch the "Windows 10 IoT Core Watcher" utility:
 
-	- Click the windows "**Start**" button
-	- Type "**WindowsIoTCoreWatcher**" to pull it up in the search results
-	- You may want to right click on the program name and select "**Pin to Start**" to pin it to your start screen for easy access
-	- Press **Enter** to run it
-
 	![windows-iot-core-watcher-open-browser](Images/windows-iot-core-watcher-open-browser.png?raw=true)
 
 2. To use WiFi, you will need to provide Windows 10 IoT core with the WiFi network credentials.
 	1. Enter **Administrator** for the username, and supply your password (_**p@ssw0rd**_ by default).
 	2. Click **Networking** in the left-hand pane.
-	3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection.
+	3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection.  Make sure the "**Create profile (auto re-connect)**" check box is **checked** so that the WiFi network will reconnect automatically if the Raspberry Pi reboots. 
 
 	![networking-wifi-adapters](Images/networking-wifi-adapters.png?raw=true)
 
