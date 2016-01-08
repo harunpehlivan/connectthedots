@@ -77,6 +77,8 @@ To setup your devices perform the following steps:
 
 5. Connect the Raspberry Pi to a power supply, optionally a keyboard, mouse and monitor, and use the Ethernet cable to connect your device and your development PC. You can do it by plugging in one end of the spare Ethernet cable to the extra Ethernet port on your PC, and the other end of the cable to the Ethernet port on your IoT Core device. (Do this using an on-board port or an auto-crossover USB->Ethernet interface.)
 
+	![windows-10-iot-core-fez-hat-hardware-setup](images/windows-10-iot-core-fez-hat-hardware-setup.png?raw=true)
+
 6. Wait for the OS to boot.
 
 7. Run the **Windows 10 IoT Core Watcher** utility (installed in step 2) in your development PC and copy your Raspberry Pi IP address by right-clicking on the detected device and selecting **Copy IP Address**.
@@ -153,12 +155,17 @@ You can also rename the device and set the time zone by using the web server, bu
 
 #### Using WiFi on your Device
 
-1. To configure your device, run the **Windows 10 IoT Core Watcher** utility in your development PC and open the [web-based management](https://ms-iot.github.io/content/en-US/win10/tools/Webb.htm) application by right-clicking the detected device and selecting **Web Browser Here**.
+1. To configure your device, run the **Windows 10 IoT Core Watcher** utility in your development PC and open the [web-based management](http://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm) application by right-clicking the detected device and selecting **Web Browser Here**.  To launch the "Windows 10 IoT Core Watcher" utility:
+
+	- Click the windows "**Start**" button
+	- Type "**WindowsIoTCoreWatcher**" to pull it up in the search results
+	- You may want to right click on the program name and select "**Pin to Start**" to pin it to your start screen for easy access
+	- Press **Enter** to run it
 
 	![windows-iot-core-watcher-open-browser](Images/windows-iot-core-watcher-open-browser.png?raw=true)
 
 2. To use WiFi, you will need to provide Windows 10 IoT core with the WiFi network credentials.
-	1. Enter **Administrator** for the username, and supply your password (_p@ssw0rd_ by default).
+	1. Enter **Administrator** for the username, and supply your password (_**p@ssw0rd**_ by default).
 	2. Click **Networking** in the left-hand pane.
 	3. Under **Available networks**, select network you would like to connect to and supply the connection credentials. Click **Connect** to initiate the connection.
 
