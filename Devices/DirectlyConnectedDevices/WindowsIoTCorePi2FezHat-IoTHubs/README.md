@@ -209,6 +209,8 @@ You will need a Microsoft Azure subscription ([free trial subscription] (http://
 
 To create a Stream Analytics Job, perform the following steps.
 
+1. Currently the new Azure Portal doesn't support all of the features of Stream Analytics required for this lab.  For that reason, the Stream Analaytics configuration needs to be done in the **classic portal**.   To open the classic portal, in your browser navigate to https://manage.windowsazure.com and login in you Azure Subscription's credentials. 
+
 1. In the Azure Management Portal, click **NEW**, then click **DATA SERVICES**, then **STREAM ANALYTICS**, and finally **QUICK CREATE**.
 2. Enter the **Job Name**, select a **Region**, such as _East US_; and the enter a **NEW STORAGE ACCOUNT NAME** if this is the first storage account in the region used for Stream Analitycs; if not you have to select the one already used for that matter.
 3. Click **CREATE A STREAM ANALITYCS JOB**.
@@ -659,7 +661,7 @@ In order to feed the Power BI reports with the information gathered by the hats 
 ##### Stream Analytics Input Setup
 Before the information can be delivered to **Power BI**, it must be processed by a **Stream Analytics Job**. To do so, an input for that job must be provided. As the Raspberry devices are sending information to an IoT Hub, it will be set as the input for the job.
 
-1. Go to the Azure management portal and select the **Stream Analytics** service. There you will find the Stream Analytics job created during the _Azure services setup_. Click on the job to enter the Stream Analytics configuration screen.
+1. Go to the classic [Azure management portal](Stream Analytics Input ) (https://manage.windowsazure.com) and select the **Stream Analytics** service. There you will find the Stream Analytics job created during the _Azure services setup_. Click on the job to enter the Stream Analytics configuration screen.
 
 	![Stream Analytics configuration](Images/stream-analytics-configuration.png?raw=true)
 
