@@ -1,4 +1,4 @@
-﻿Windows 10 IoT Core Hands-on Lab
+Windows 10 IoT Core Hands-on Lab
 ========================================
 ConnectTheDots will help you get tiny devices connected to Microsoft Azure, and to implement great IoT solutions taking advantage of Microsoft Azure advanced analytic services such as Azure Stream Analytics and Azure Machine Learning.
 
@@ -334,7 +334,7 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 	_Setting up the Remote Connection_
 
-6. If the device is not auto-detected, the Raspberry Pi IP or name can be entered in the **Address** field. Otherwise, click the desired device. Change the **Authentication Mode** to **None**:
+6. If the device is not auto-detected, the Raspberry Pi IP or name can be entered in the **Address** field. Otherwise, click the desired device. Change the **Authentication Mode** to **Universal (Unencrypted Protocol)**:
 
 	![Set Authentication mode to Universal](Images/set-authentication-mode-to-universal.png?raw=true)
 
