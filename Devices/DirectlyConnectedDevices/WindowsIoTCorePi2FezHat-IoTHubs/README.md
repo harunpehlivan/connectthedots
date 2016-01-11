@@ -254,13 +254,33 @@ Now that the device is configured, you will see how to create an application to 
 ### Read FEZ HAT sensors
 In order to get the information out of the hat sensors, you will take advantage of the [Developers' Guide](https://www.ghielectronics.com/docs/329/fez-hat-developers-guide "GHI Electronics FEZ HAT Developer's Guide") that [GHI Electronics](https://www.ghielectronics.com/ "GHI Electronics")  published.
 
-1. Download the [zipped repository](https://bitbucket.org/ghi_elect/windows-iot/get/183b64180b7c.zip "Download FEZ HAT Developers' Guide repository"), extract the files in your file system and locate the _GHIElectronics.UAP.sln_ solution file (You must have **Visual Studio** installed in order to open the solution).
+1. Download the [zipped repository](https://bitbucket.org/ghi_elect/windows-iot/get/183b64180b7c.zip "Download FEZ HAT Developers' Guide repository")
+
+1. Unblock the .zip file before extracting it. Unblocking the .zip file will keep Visual Studio from prompting you about "Trustworthy Sources". To Unblock the .zip file:
+
+	- Right click on the downloaded .zip file
+	- Select "**Properties**" from the popup menu. 
+	- In the "**Properties**" window, on the "**General**" tab, turn on the checkbox labeled "**Unblock**"
+	- Click "**OK**"
+
+1. Extract the files in your file system and locate the _GHIElectronics.UAP.sln_ solution file (You must have **Visual Studio** installed in order to open the solution).
 
 2. After opening the solution you will see several projects. The _Developers's Guide_ comes with examples of many of the shields provided by the company. Right-click the one named _GHIElectronics.UAP.Examples.FEZHAT_, and select **Set as Startup Project**.
 
 	![Set FEZ HAT examples project as default](Images/set-fez-hat-examples-project-as-default.png?raw=true)
 
 	_Setting the FEZ hat example as the default project_
+
+1. Ensure that the target platform for the project is set to "**ARM**":
+
+	![arm-target-platform](images/arm-target-platform.png?raw=true)
+
+1. Build the solution to restore the NuGet packages, and make sure it builds:
+
+	![ghifezhat-build-solution](images/ghifezhat-build-solution.png?raw=true)
+
+	![ghifezhat-build-succeeded](images/ghifezhat-build-succeeded.png?raw=true)
+
 
 	> **Note:** Now you will inspect the sample code to see how it works. Bear in mind that this example is intended to show all the available features of the shield, while in this lab you will use just a couple of them (temperature and light sensors).
 
@@ -316,7 +336,7 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 6. If the device is not auto-detected, the Raspberry Pi IP or name can be entered in the **Address** field. Otherwise, click the desired device. Change the **Authentication Mode** to **None**:
 
-	![Set Authentication mode to None](Images/set-authentication-mode-to-none.png?raw=true)
+	![Set Authentication mode to Universal](Images/set-authentication-mode-to-universal.png?raw=true)
 
 	_Setting the Authentication Mode_
 
@@ -328,7 +348,7 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 	> **Note:** Clicking the **Find** button will display the **Remote Connection** screen.
 
-8. If the program is successfully deployed to the device, the current value of the different sensors will be displayed on the screen. The shield leds will also be turned on and off alternately. If you don't have a screen connected to the _Raspberry_, you can add the following code to the **OnTick** method in order to show the value of the sensors in the Visual Studio **Output Console**.  (Insert the code after reading the sensors).
+1. If you don't have a screen connected to the _Raspberry_, you can add the following code to the **OnTick** method in order to show the value of the sensors in the Visual Studio **Output Console**.  (Insert the code after reading the sensors).
 
 	````C#
 	// Add diagnostics information
@@ -339,6 +359,15 @@ In order to get the information out of the hat sensors, you will take advantage 
 	    this.Button18TextBox.Text,
 	    this.Button22TextBox.Text);
 	````
+
+
+1. Click the debug button to start the deployment to the Raspberry Pi.  The first deployment will take some time as the remote debug tools, frameworks, and your code all need to be deployed.  This could take up to a couple of minutes to completely deploy.  You can monitor the status in the Visual Studio "**Output**" window.
+
+	![debug-ghifezhat](images/debug-ghifezhat.png?raw=true)
+
+8. If the program is successfully deployed to the device, the current value of the different sensors will be displayed on the screen. The shield leds will also be turned on and off alternately. In addition, if you added the Debug.Writeline code above to the OnTick method, the "**Output**" window will display sensor data:
+
+	![ghifezhat-debug-output](images/ghifezhat-debug-output.png?raw=true)
 
 <a name="Task22" />
 ### Send telemetry data to the Azure IoT Hub
