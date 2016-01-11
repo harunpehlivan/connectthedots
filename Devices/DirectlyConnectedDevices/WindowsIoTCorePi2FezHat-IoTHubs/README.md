@@ -201,7 +201,7 @@ You will need a Microsoft Azure subscription ([free trial subscription] (http://
 
 	![IoT hub shared access policies](Images/iot-hub-shared-access-policies.png?raw=true)
 
-5. Select the Shared access policy called **iothubowner**, and take note of the **Primary key** and **connection string** on the right blade.
+5. Select the Shared access policy called **iothubowner**, and take note of the **Primary key** and **connection string** in the right blade.  You should copy these into a text file for future use. 
 
 	![Get IoT Hub owner connection string](Images/get-iot-hub-owner-connection-string.png?raw=true)
 
@@ -209,18 +209,19 @@ You will need a Microsoft Azure subscription ([free trial subscription] (http://
 
 To create a Stream Analytics Job, perform the following steps.
 
-1. Currently the new Azure Portal doesn't support all of the features of Stream Analytics required for this lab.  For that reason, the Stream Analaytics configuration needs to be done in the **classic portal**.   To open the classic portal, in your browser navigate to https://manage.windowsazure.com and login in you Azure Subscription's credentials. 
+1. Currently the new Azure Portal doesn't support all of the features of Stream Analytics required for this lab.  For that reason, the Stream Analaytics configuration needs to be done in the **classic portal**.   To open the classic portal, in your browser navigate to https://manage.windowsazure.com and login in with your Azure Subscription's credentials. 
 
 1. In the Azure Management Portal, click **NEW**, then click **DATA SERVICES**, then **STREAM ANALYTICS**, and finally **QUICK CREATE**.
-2. Enter the **Job Name**, select a **Region**, such as _East US_; and the enter a **NEW STORAGE ACCOUNT NAME** if this is the first storage account in the region used for Stream Analitycs; if not you have to select the one already used for that matter.
+
+2. Enter the **Job Name**, select a **Region**, such as _East US_ (if it is an option, create the Stream Analytics Job in the same region as your IoT Hub) and the enter a **NEW STORAGE ACCOUNT NAME** if this is the first storage account in the region used for Stream Analitycs, if not you have to select the one already used for that region.
+
 3. Click **CREATE A STREAM ANALITYCS JOB**.
 
 	![Creating a Stream Analytics Job](Images/createStreamAnalytics.png?raw=true)
 
 	_Creating a Stream Analytics Job_
 
-
-4. After the _Stream Analytics_ is created, in the left pane click **STORAGE**, then click the account you used in the previous step, and click **MANAGE ACCESS KEYS**. Write down the **STORAGE ACCOUNT NAME** and the **PRIMARY ACCESS KEY** as you will use those value later.
+4. After the _Stream Analytics_ job is created, in the left pane click **STORAGE**, then click the account you used in the previous step, and click **MANAGE ACCESS KEYS**. As with the IoT Hub details, copy the **STORAGE ACCOUNT NAME** and the **PRIMARY ACCESS KEY** into a text file as you will use those values later.
 
 	![manage access keys](Images/manage-access-keys.png?raw=true)
 
@@ -230,7 +231,7 @@ To create a Stream Analytics Job, perform the following steps.
 ### Registering your device
 You must register your device in order to be able to send and receive information from the Azure IoT Hub. This is done by registering a [Device Identity](https://azure.microsoft.com/en-us/documentation/articles/iot-hub-devguide/#device-identity-registry) in the IoT Hub.
 
-1. Open the Device Explorer app and fill the **IoT Hub Connection String** field with the connection string of the IoT Hub you created in previous steps and click on **Update**.
+1. Open the Device Explorer app (C:\Program Files (x86)\Microsoft\DeviceExplorer\DeviceExplorer.exe) and fill the **IoT Hub Connection String** field with the connection string of the IoT Hub you created in previous steps and click on **Update**.
 
 	![Configure Device Explorer](Images/configure-device-explorer.png?raw=true)
 
