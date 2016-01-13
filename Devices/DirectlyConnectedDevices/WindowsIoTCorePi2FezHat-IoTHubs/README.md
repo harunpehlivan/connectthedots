@@ -273,13 +273,13 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 1. Ensure that the target platform for the project is set to "**ARM**":
 
-	![arm-target-platform](images/arm-target-platform.png?raw=true)
+	![arm-target-platform](Images/arm-target-platform.png?raw=true)
 
 1. Build the solution to restore the NuGet packages, and make sure it builds:
 
-	![ghifezhat-build-solution](images/ghifezhat-build-solution.png?raw=true)
+	![ghifezhat-build-solution](Images/ghifezhat-build-solution.png?raw=true)
 
-	![ghifezhat-build-succeeded](images/ghifezhat-build-succeeded.png?raw=true)
+	![ghifezhat-build-succeeded](Images/ghifezhat-build-succeeded.png?raw=true)
 
 
 	> **Note:** Now you will inspect the sample code to see how it works. Bear in mind that this example is intended to show all the available features of the shield, while in this lab you will use just a couple of them (temperature and light sensors).
