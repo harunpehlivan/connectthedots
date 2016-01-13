@@ -77,7 +77,7 @@ To setup your devices perform the following steps:
 
 4. Connect the Raspberry Pi to a power supply, optionally a keyboard, mouse and monitor, and use the Ethernet cable to connect your device and your development PC. You can do it by plugging in one end of the spare Ethernet cable to the extra Ethernet port on your PC, and the other end of the cable to the Ethernet port on your IoT Core device. (Do this using an on-board port or an auto-crossover USB->Ethernet interface.)
 
-	![windows-10-iot-core-fez-hat-hardware-setup](images/windows-10-iot-core-fez-hat-hardware-setup.png?raw=true)
+	![windows-10-iot-core-fez-hat-hardware-setup](Images/windows-10-iot-core-fez-hat-hardware-setup.png)
 
 5. Wait for the OS to boot.
 
