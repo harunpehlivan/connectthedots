@@ -75,13 +75,13 @@ To setup your devices perform the following steps:
 
 3. Once you have the image on the card, insert the micro SD card in the Raspberry Pi device.
 
-5. Connect the Raspberry Pi to a power supply, optionally a keyboard, mouse and monitor, and use the Ethernet cable to connect your device and your development PC. You can do it by plugging in one end of the spare Ethernet cable to the extra Ethernet port on your PC, and the other end of the cable to the Ethernet port on your IoT Core device. (Do this using an on-board port or an auto-crossover USB->Ethernet interface.)
+4. Connect the Raspberry Pi to a power supply, optionally a keyboard, mouse and monitor, and use the Ethernet cable to connect your device and your development PC. You can do it by plugging in one end of the spare Ethernet cable to the extra Ethernet port on your PC, and the other end of the cable to the Ethernet port on your IoT Core device. (Do this using an on-board port or an auto-crossover USB->Ethernet interface.)
 
 	![windows-10-iot-core-fez-hat-hardware-setup](images/windows-10-iot-core-fez-hat-hardware-setup.png?raw=true)
 
-6. Wait for the OS to boot.
+5. Wait for the OS to boot.
 
-7. Run the **Windows 10 IoT Core Watcher** utility (installed in step 2) in your development PC and copy your Raspberry Pi IP address by right-clicking on the detected device and selecting **Copy IP Address**.
+6. Run the **Windows 10 IoT Core Watcher** utility (installed in step 2) in your development PC and copy your Raspberry Pi IP address by right-clicking on the detected device and selecting **Copy IP Address**.
 
 	- Click the windows "**Start**" button
 	- Type "**WindowsIoTCoreWatcher**" to pull it up in the search results
@@ -90,11 +90,11 @@ To setup your devices perform the following steps:
 
 	![windows-iot-core-watcher](Images/windows-iot-core-watcher.png?raw=true)
 
-8. Launch an administrator PowerShell console on your local PC. The easiest way to do this is to type _powershell_ in the **Search the web and Windows** textbox near the Windows Start Menu. Windows will find **PowerShell** on your machine. Right-click the **Windows PowerShell** entry and select **Run as administrator**. The PS console will show.
+7. Launch an administrator PowerShell console on your local PC. The easiest way to do this is to type _powershell_ in the **Search the web and Windows** textbox near the Windows Start Menu. Windows will find **PowerShell** on your machine. Right-click the **Windows PowerShell** entry and select **Run as administrator**. The PS console will show.
 
 	![Running Powershell as Administrator](Images/running-powershell-as-administrator.png?raw=true)
 
-9. You may need to start the **WinRM** service on your desktop to enable remote connections. From the PS console type the following command:
+8. You may need to start the **WinRM** service on your desktop to enable remote connections. From the PS console type the following command:
 
 	`net start WinRM`
 
