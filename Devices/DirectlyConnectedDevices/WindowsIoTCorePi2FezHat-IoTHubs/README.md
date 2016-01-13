@@ -363,11 +363,11 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 1. Click the debug button to start the deployment to the Raspberry Pi.  The first deployment will take some time as the remote debug tools, frameworks, and your code all need to be deployed.  This could take up to a couple of minutes to completely deploy.  You can monitor the status in the Visual Studio "**Output**" window.
 
-	![debug-ghifezhat](images/debug-ghifezhat.png?raw=true)
+	![debug-ghifezhat](Images/debug-ghifezhat.png?raw=true)
 
 8. If the program is successfully deployed to the device, the current value of the different sensors will be displayed on the screen. The shield leds will also be turned on and off alternately. In addition, if you added the Debug.Writeline code above to the OnTick method, the "**Output**" window will display sensor data:
 
-	![ghifezhat-debug-output](images/ghifezhat-debug-output.png?raw=true)
+	![ghifezhat-debug-output](Images/ghifezhat-debug-output.png?raw=true)
 
 <a name="Task22" />
 ### Send telemetry data to the Azure IoT Hub
