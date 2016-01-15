@@ -1,4 +1,4 @@
-Windows 10 IoT Core Hands-on Lab
+﻿Windows 10 IoT Core Hands-on Lab
 ========================================
 ConnectTheDots will help you get tiny devices connected to Microsoft Azure, and to implement great IoT solutions taking advantage of Microsoft Azure advanced analytic services such as Azure Stream Analytics and Azure Machine Learning.
 
@@ -271,20 +271,21 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 	_Setting the FEZ hat example as the default project_
 
-1. Ensure that the target platform for the project is set to "**ARM**":
+3. Ensure that the target platform for the project is set to "**ARM**":
 
 	![arm-target-platform](Images/arm-target-platform.png?raw=true)
 
-1. Build the solution to restore the NuGet packages, and make sure it builds:
+4. Build the solution to restore the NuGet packages, and make sure it builds:
 
 	![ghifezhat-build-solution](Images/ghifezhat-build-solution.png?raw=true)
 
 	![ghifezhat-build-succeeded](Images/ghifezhat-build-succeeded.png?raw=true)
 
+5. If after building the solution you still see IntelliSense errors in the code, you may need to close and re-open Visual Studio, then re-open the solution.
 
 	> **Note:** Now you will inspect the sample code to see how it works. Bear in mind that this example is intended to show all the available features of the shield, while in this lab you will use just a couple of them (temperature and light sensors).
 
-3. Open the _MainPage.xaml.cs_ file and locate the **Setup** method.
+6. Open the _MainPage.xaml.cs_ file and locate the **Setup** method.
 
 	````C#
 	private async void Setup()
@@ -322,25 +323,25 @@ In order to get the information out of the hat sensors, you will take advantage 
 	````
 	This sample shows how to use the FEZ HAT driver to get data from the sensors. The data is then shown in the UI. (To see how the UI is designed check the _MainPage.xaml_ file)
 
-4. To deploy the application to the Raspberry Pi, the device has to be on the same network as the development computer. To run the program, select **Remote device** in the _Debug Target_ dropdown list:
+7. To deploy the application to the Raspberry Pi, the device has to be on the same network as the development computer. To run the program, select **Remote device** in the _Debug Target_ dropdown list:
 
 	![Deploy to Remote machine](Images/deploy-to-remote-machine.png?raw=true)
 
 	_Deploying the application to a Remote Machine_
 
-5. If a remote machine has not been selected before, the **Select Remote Connection** screen will be displayed:
+8. If a remote machine has not been selected before, the **Select Remote Connection** screen will be displayed:
 
 	![Remote Connection](Images/remote-connection.png?raw=true)
 
 	_Setting up the Remote Connection_
 
-6. If the device is not auto-detected, the Raspberry Pi IP or name can be entered in the **Address** field. Otherwise, click the desired device. Change the **Authentication Mode** to **Universal (Unencrypted Protocol)**:
+9. If the device is not auto-detected, the Raspberry Pi IP or name can be entered in the **Address** field. Otherwise, click the desired device. Change the **Authentication Mode** to **Universal (Unencrypted Protocol)**:
 
 	![Set Authentication mode to Universal](Images/set-authentication-mode-to-universal.png?raw=true)
 
 	_Setting the Authentication Mode_
 
-7. If you want to change the registered remote device later it can be done in the project **Properties** page. Right-click the project name (_GHIElectronics.UAP.Examples.FEZHAT_) and select **Properties**. In the project Properties' page, select the **Debug** tab and enter the new device name or IP in the **Remote Machine** field.
+10. If you want to change the registered remote device later it can be done in the project **Properties** page. Right-click the project name (_GHIElectronics.UAP.Examples.FEZHAT_) and select **Properties**. In the project Properties' page, select the **Debug** tab and enter the new device name or IP in the **Remote Machine** field.
 
 	![Change Remote connection](Images/change-remote-connection.png?raw=true)
 
@@ -348,7 +349,7 @@ In order to get the information out of the hat sensors, you will take advantage 
 
 	> **Note:** Clicking the **Find** button will display the **Remote Connection** screen.
 
-1. If you don't have a screen connected to the _Raspberry_, you can add the following code to the **OnTick** method in order to show the value of the sensors in the Visual Studio **Output Console**.  (Insert the code after reading the sensors).
+11. If you don't have a screen connected to the _Raspberry_, you can add the following code to the **OnTick** method in order to show the value of the sensors in the Visual Studio **Output Console**.  (Insert the code after reading the sensors).
 
 	````C#
 	// Add diagnostics information
@@ -361,11 +362,11 @@ In order to get the information out of the hat sensors, you will take advantage 
 	````
 
 
-1. Click the debug button to start the deployment to the Raspberry Pi.  The first deployment will take some time as the remote debug tools, frameworks, and your code all need to be deployed.  This could take up to a couple of minutes to completely deploy.  You can monitor the status in the Visual Studio "**Output**" window.
+12. Click the debug button to start the deployment to the Raspberry Pi.  The first deployment will take some time as the remote debug tools, frameworks, and your code all need to be deployed.  This could take up to a couple of minutes to completely deploy.  You can monitor the status in the Visual Studio "**Output**" window.
 
 	![debug-ghifezhat](Images/debug-ghifezhat.png?raw=true)
 
-8. If the program is successfully deployed to the device, the current value of the different sensors will be displayed on the screen. The shield leds will also be turned on and off alternately. In addition, if you added the Debug.Writeline code above to the OnTick method, the "**Output**" window will display sensor data:
+13. If the program is successfully deployed to the device, the current value of the different sensors will be displayed on the screen. The shield leds will also be turned on and off alternately. In addition, if you added the Debug.Writeline code above to the OnTick method, the "**Output**" window will display sensor data:
 
 	![ghifezhat-debug-output](Images/ghifezhat-debug-output.png?raw=true)
 
