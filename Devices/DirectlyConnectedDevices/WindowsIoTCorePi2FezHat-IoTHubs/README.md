@@ -1,4 +1,4 @@
-Windows 10 IoT Core Hands-on Lab
+﻿Windows 10 IoT Core Hands-on Lab
 ========================================
 ConnectTheDots will help you get tiny devices connected to Microsoft Azure, and to implement great IoT solutions taking advantage of Microsoft Azure advanced analytic services such as Azure Stream Analytics and Azure Machine Learning.
 
@@ -87,6 +87,7 @@ To setup your devices perform the following steps:
 	- Type "**WindowsIoTCoreWatcher**" to pull it up in the search results
 	- You may want to right click on the program name and select "**Pin to Start**" to pin it to your start screen for easy access
 	- Press **Enter** to run it
+	- Your device should appear in the list within 5 seconds or so. If it does not, close the Windows 10 IoT Core Watcher, and relaunch it again
 
 	![windows-iot-core-watcher](Images/windows-iot-core-watcher.png?raw=true)
 
